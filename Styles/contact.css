@@ -1,0 +1,95 @@
+/* Global Styles */
+
+:root {
+    --desktop-padding: 75px 40px;
+    --mobile-padding: 30px 15px;
+
+    --primary-color: rgb(65, 47, 47);
+    --secondary-clr: rgb(255, 248, 220);
+
+    --header-font-size: 40px;
+    --paragraph-font-size: 18px;
+    --header-font-size-mobile: 28px;
+    --paragraph-font-size-mobile: 16px;
+}
+
+/* Main */
+
+main {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+aside {
+    border-top: 1px solid var(--secondary-clr);
+    border-bottom: 1px solid var(--secondary-clr);
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+aside h1 {
+    color: var(--secondary-clr);
+    font-size: var(--header-font-size);
+}
+
+.contact-us {
+    padding: var(--desktop-padding);
+    height: auto;
+    background-color: var(--secondary-clr);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 75px;
+}
+
+.contact-us h1 {
+    color: var(--primary-color);
+    font-size: var(--header-font-size);
+}
+
+.contact-us .contact-us-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-us .contact-us-sections p {
+    color: var(--primary-color);
+    font-size: var(--paragraph-font-size);
+}
+
+.contact-us .contact-us-sections p span {
+    text-decoration: underline;
+}
+
+/* Responsiveness */
+
+@media screen and (min-width: 400px) and (max-width: 576px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    aside {
+        padding: 10px 0;
+    }
+    aside h1 {
+        font-size: var(--header-font-size-mobile);
+    }
+    .contact-us {
+        padding: var(--mobile-padding);
+        gap: 30px;
+    }
+    .contact-us h1 {
+        font-size: var(--header-font-size-mobile);
+    }
+    .contact-us .contact-us-sections {
+        gap: 10px;
+    }
+    .contact-us .contact-us-sections p {
+        font-size: var(--paragraph-font-size-mobile);
+    }
+}
+
+

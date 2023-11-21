@@ -1,0 +1,323 @@
+/* Global Styles */
+
+:root {
+    --desktop-padding: 50px 30px;
+    --mobile-padding: 20px 10px;
+
+    --primary-color: rgb(65, 47, 47);
+    --secondary-clr: rgb(255, 248, 220);
+
+    --header-font-size: 48px;
+    --paragraph-font-size: 24px;
+    --header-font-size-mobile: 28px;
+    --paragraph-font-size-mobile: 16px;
+}
+
+/* Main */
+
+main {
+    color: var(--primary-color);
+    padding: var(--desktop-padding);
+    background-color: var(--secondary-clr);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* CraftCoffeeShop Blog First Section */
+
+.blog {
+    padding: var(--desktop-padding);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.blog .blog-content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.blog .blog-content h1 {
+    font-size: var(--header-font-size);
+}
+
+.blog .blog-content p {
+    font-size: var(--paragraph-font-size);
+}
+
+.blog .blog-image {
+    display: flex;
+    justify-content: center;
+}
+
+.blog .blog-image img {
+    width: 450px;
+    height: 450px;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+/* Latest Articles */
+
+.articles {
+    padding: var(--desktop-padding);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Articles Header */
+
+.articles .articles-header {
+    padding: 10px 50px;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+}
+
+.articles .articles-header h1 {
+    color: var(--secondary-clr);
+    font-size: var(--header-font-size);
+}
+
+/* Articles Container  */
+
+.articles-container {
+    color: var(--secondary-clr);
+    /* padding: var(--desktop-padding); */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.articles .articles-container .articles-container-cards {
+    height: 330px;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.articles .articles-container .articles-container-cards .articles-container-cards-content {
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    position: relative;
+}
+
+.articles .articles-container .articles-container-cards .articles-container-cards-content h3 {
+    font-size: 20px;
+}
+
+.articles .articles-container .articles-container-cards .articles-container-cards-content p {
+    font-size: 14px;
+}
+
+.articles .articles-container .articles-container-cards .articles-container-cards-content button {
+    color: var(--primary-color);
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    background-color: var(--secondary-clr);
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+}
+
+.articles .articles-container .articles-container-cards .articles-container-cards-image {
+    display: flex;
+    justify-content: center;
+}
+
+.articles .articles-container .articles-container-cards .articles-container-cards-image img {
+    width: 330px;
+    height: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+/* Share your story */
+
+.share-your-story {
+    padding: 50px 200px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 100px;
+}
+
+.share-your-story .content h1 {
+    font-size: var(--header-font-size);
+    margin-bottom: 20px;
+}
+
+.share-your-story .content p {
+    font-size: var(--paragraph-font-size);
+}
+
+/* Form */
+
+.share-your-story .form {
+    color: var(--secondary-clr);
+    padding: 20px;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.share-your-story .form .form-author input,
+.share-your-story .form .form-title input {
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+}
+
+.share-your-story .form .form-story textarea {
+    margin-top: 5px;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+}
+
+.share-your-story .form button {
+    color: var(--primary-color);
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--secondary-clr);
+    cursor: pointer;
+}
+
+/* Responsiveness */
+
+@media screen and (max-width: 576px) {
+    /* Main */
+    main {
+        padding: var(--mobile-padding);
+        gap: 10px;
+    }
+    /* CraftCoffeeShop Blog First Section */
+    .blog {
+        padding: var(--mobile-padding);
+        flex-direction: column;
+        gap: 10px;
+    }
+    .blog .blog-content {
+        gap: 10px;
+    }
+    .blog .blog-content h1 {
+        font-size: var(--header-font-size-mobile);
+    }
+    .blog .blog-content p {
+        font-size: var(--paragraph-font-size-mobile);
+    }
+    .blog .blog-image img {
+        width: 350px;
+        height: 350px;
+    }
+    /* Latest Articles */
+    .articles {
+        padding: var(--mobile-padding);
+        gap: 10px;
+    }
+    /* Articles Header */
+    .articles .articles-header {
+        padding: 10px 30px;
+    }
+    .articles .articles-header h1 {
+        font-size: var(--header-font-size-mobile);
+    }
+    /* Articles Container  */
+    .articles-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;  
+    }
+    .articles .articles-container .articles-container-cards {
+        padding: 15px;
+        height: auto;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .articles .articles-container .articles-container-cards .articles-container-cards-content {
+        gap: 10px;
+    }
+    .articles .articles-container .articles-container-cards .articles-container-cards-content h3 {
+        font-size: 18px;
+    }
+    .articles .articles-container .articles-container-cards .articles-container-cards-content p {
+        font-size: 14px;
+    }
+    .articles .articles-container .articles-container-cards .articles-container-cards-content button {
+        display: none;
+    }
+    .articles .articles-container .articles-container-cards .articles-container-cards-image img {
+        width: 100%;
+        height: 330px;
+    }
+    /* Share your story */
+    .share-your-story {
+        padding: 20px 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .share-your-story .content h1 {
+        font-size: var(--header-font-size-mobile);
+        margin-bottom: 10px;
+    }
+    .share-your-story .content p {
+        font-size: var(--paragraph-font-size-mobile);
+    }
+    /* Form */
+    .share-your-story .form {
+    color: var(--secondary-clr);
+    padding: 20px;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.share-your-story .form .form-author input,
+.share-your-story .form .form-title input {
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+}
+
+.share-your-story .form .form-story textarea {
+    margin-top: 5px;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+}
+
+.share-your-story .form button {
+    color: var(--primary-color);
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--secondary-clr);
+    cursor: pointer;
+}
+}
+
+

@@ -1,0 +1,278 @@
+/* Global Styles */
+
+:root {
+    --desktop-padding: 25px 50px;
+    --mobile-padding: 10px 15px;
+
+    --primary-color: rgb(65, 47, 47);
+    --secondary-clr: rgb(255, 248, 220);
+    --hover-clr: rgb(101, 73, 73);
+
+    --header-font-size: 48px;
+    --paragraph-font-size: 24px;
+    --header-font-size-mobile: 32px;
+    --paragraph-font-size-mobile: 18px;
+}
+
+/* Main */
+
+main {
+    padding: var(--desktop-padding);
+    color: var(--primary-color);
+    background-color: var(--secondary-clr);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* About Us, Our History, Our Mission and Our Commitment Sections  */
+
+.about-us,
+.our-history,
+.our-mission,
+.our-commitment {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-us .about-us-content,
+.our-history .our-history-content,
+.our-mission .our-mission-content,
+.our-commitment .our-commitment-content {
+    padding: var(--desktop-padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about-us .about-us-content:hover,
+.our-history .our-history-content:hover,
+.our-mission .our-mission-content:hover,
+.our-commitment .our-commitment-content:hover {
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px rgba(65, 47, 47, 0.2);
+}  
+
+.about-us .about-us-content h1,
+.our-history .our-history-content h1,
+.our-mission .our-mission-content h1,
+.our-commitment .our-commitment-content h1 {
+    font-size: var(--header-font-size);
+}
+
+.about-us .about-us-content p,
+.our-history .our-history-content p,
+.our-mission .our-mission-content p,
+.our-commitment .our-commitment-content p {
+    font-size: var(--paragraph-font-size);
+    text-align: justify;
+}
+
+.about-us .about-us-image,
+.our-history .our-history-image,
+.our-mission .our-mission-image,
+.our-commitment .our-commitment-image {
+    padding: var(--desktop-padding);
+}
+
+.about-us .about-us-image img,
+.our-history .our-history-image img,
+.our-mission .our-mission-image img,
+.our-commitment .our-commitment-image img {
+    width: 450px;
+    height: 450px;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+/* Team Section */
+
+.team {
+    padding: var(--desktop-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.team > h1 {
+    font-size: var(--header-font-size);
+}
+
+.team > p {
+    font-size: var(--paragraph-font-size);
+    text-align: center;
+}
+
+.team .team-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.team .team-container .team-container-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.team .team-container .team-container-cards img {
+    width: 100%;
+    height: 300px;
+    border: 5px solid rgb(65, 47, 47);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.team .team-container .team-container-cards span {
+    font-size: var(--paragraph-font-size);
+}
+
+/* Our Commitment Cards */
+
+.our-commitment-container {
+    padding: var(--desktop-padding);
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.our-commitment-container .our-commitment-container-cards {
+    padding: 10px 5px;
+    border-radius: 25px;
+    background-color: var(--secondary-clr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.our-commitment-container .our-commitment-container-cards img {
+    width: 250px;
+    height: 250px;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.our-commitment-container .our-commitment-container-cards h1 {
+    font-size: 24px;
+}
+
+.our-commitment-container .our-commitment-container-cards p {
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Responsiveness */
+
+@media screen and (min-width: 400px) and (max-width: 576px) {
+    /* Main */
+    main {
+        padding: var(--mobile-padding);
+        gap: 10px;
+    }
+    /* About Us, Our History, Our Mission and Our Commitment Sections  */
+    .about-us,
+    .our-history,
+    .our-mission,
+    .our-commitment {
+        flex-direction: column;        
+    }
+    .about-us .about-us-content,
+    .our-history .our-history-content,
+    .our-mission .our-mission-content,
+    .our-commitment .our-commitment-content {
+        order: 1;
+        padding: var(--mobile-padding);
+        gap: 10px;
+    }
+    .about-us .about-us-image,
+    .our-history .our-history-image,
+    .our-mission .our-mission-image,
+    .our-commitment .our-commitment-image {
+        order: 2;
+    }
+    .about-us .about-us-content:hover,
+    .our-history .our-history-content:hover,
+    .our-mission .our-mission-content:hover,
+    .our-commitment .our-commitment-content:hover {
+        box-shadow: none;
+    }  
+    .about-us .about-us-content h1,
+    .our-history .our-history-content h1,
+    .our-mission .our-mission-content h1,
+    .our-commitment .our-commitment-content h1 {
+        font-size: var(--header-font-size-mobile);
+    }
+    .about-us .about-us-content p,
+    .our-history .our-history-content p,
+    .our-mission .our-mission-content p,
+    .our-commitment .our-commitment-content p {
+        font-size: var(--paragraph-font-size-mobile);
+    }
+    .about-us .about-us-image,
+    .our-history .our-history-image,
+    .our-mission .our-mission-image,
+    .our-commitment .our-commitment-image {
+        padding: var(--mobile-padding);
+        display: flex;
+        justify-content: center;
+    }
+    .about-us .about-us-image img,
+    .our-history .our-history-image img,
+    .our-mission .our-mission-image img,
+    .our-commitment .our-commitment-image img {
+        width: 250px;
+        height: 250px;
+    }
+    /* Team Section */
+    .team {
+        padding: var(--mobile-padding);
+        gap: 25px;
+    }
+    .team > h1 {
+        font-size: var(--header-font-size-mobile);
+        align-self: flex-start;
+    }
+
+    .team > p {
+        font-size: var(--paragraph-font-size-mobile);
+        text-align: justify;
+    }
+    .team .team-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+    .team .team-container .team-container-cards {
+        gap: 10px;
+    }
+    .team .team-container .team-container-cards img {
+        width: 250px;
+        height: 250px;
+    }
+    .team .team-container .team-container-cards span {
+        font-size: var(--paragraph-font-size-mobile);
+    }
+    /* Our Commitment Cards */
+    .our-commitment-container {
+        color: var(--primary-color);
+        padding: var(--mobile-padding);
+        background-color: var(--secondary-clr);
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+    .our-commitment-container .our-commitment-container-cards {
+        padding: 10px 5px;
+    }
+    .our-commitment-container .our-commitment-container-cards img {
+        width: 90%;
+        height: 350px;
+    }
+}
+
