@@ -1,8 +1,9 @@
 /* Global Styles */
 
 :root {
-    --desktop-padding: 25px 50px;
+    --desktop-padding: 35px 70px;
     --mobile-padding: 10px 15px;
+    --tablet-padding: 25px 50px;
 
     --primary-color: rgb(65, 47, 47);
     --secondary-clr: rgb(255, 248, 220);
@@ -12,6 +13,8 @@
     --paragraph-font-size: 24px;
     --header-font-size-mobile: 32px;
     --paragraph-font-size-mobile: 18px;
+    --header-font-size-tablet: 40px;
+    --paragraph-font-size-tablet: 21px;
 }
 
 /* Main */
@@ -171,7 +174,9 @@ main {
 
 /* Responsiveness */
 
-@media screen and (min-width: 400px) and (max-width: 576px) {
+/* Mobile */
+
+@media screen and (max-width: 550px) {
     /* Main */
     main {
         padding: var(--mobile-padding);
@@ -234,7 +239,7 @@ main {
     /* Team Section */
     .team {
         padding: var(--mobile-padding);
-        gap: 25px;
+        gap: 10px;
     }
     .team > h1 {
         font-size: var(--header-font-size-mobile);
@@ -261,14 +266,198 @@ main {
     }
     /* Our Commitment Cards */
     .our-commitment-container {
-        color: var(--primary-color);
         padding: var(--mobile-padding);
-        background-color: var(--secondary-clr);
         grid-template-columns: repeat(1, 1fr);
         gap: 10px;
     }
     .our-commitment-container .our-commitment-container-cards {
         padding: 10px 5px;
+    }
+    .our-commitment-container .our-commitment-container-cards img {
+        width: 90%;
+        height: 350px;
+    }
+}
+
+/* Tablet */
+
+@media screen and (min-width: 551px) and (max-width: 850px) {
+    /* Main */
+    main {
+        padding: var(--tablet-padding);
+        gap: 30px;
+    }
+    /* About Us, Our History, Our Mission and Our Commitment Sections  */
+    .about-us,
+    .our-history,
+    .our-mission,
+    .our-commitment {
+        flex-direction: column;        
+    }
+    .about-us .about-us-content,
+    .our-history .our-history-content,
+    .our-mission .our-mission-content,
+    .our-commitment .our-commitment-content {
+        padding: var(--tablet-padding);
+        gap: 20px;
+        order: 1;
+    } 
+    .about-us .about-us-content h1,
+    .our-history .our-history-content h1,
+    .our-mission .our-mission-content h1,
+    .our-commitment .our-commitment-content h1 {
+        font-size: var(--header-font-size-tablet);
+    }
+    .about-us .about-us-content p,
+    .our-history .our-history-content p,
+    .our-mission .our-mission-content p,
+    .our-commitment .our-commitment-content p {
+        font-size: var(--paragraph-font-size-tablet);
+    }
+    .about-us .about-us-image,
+    .our-history .our-history-image,
+    .our-mission .our-mission-image,
+    .our-commitment .our-commitment-image {
+        padding: var(--tablet-padding);
+        display: flex;
+        justify-content: center;
+        order: 2;
+    }
+    .about-us .about-us-image img,
+    .our-history .our-history-image img,
+    .our-mission .our-mission-image img,
+    .our-commitment .our-commitment-image img {
+        width: 400px;
+        height: 400px;
+    }
+    /* Team Section */
+    .team {
+        padding: var(--tablet-padding);
+        gap: 20px;
+    }
+    .team > h1 {
+        font-size: var(--header-font-size-tablet);
+        align-self: flex-start;
+    }
+
+    .team > p {
+        font-size: var(--paragraph-font-size-tablet);
+        text-align: justify;
+    }
+    .team .team-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .team .team-container .team-container-cards {
+        gap: 20px;
+    }
+    .team .team-container .team-container-cards img {
+        width: 250px;
+        height: 250px;
+    }
+    .team .team-container .team-container-cards span {
+        font-size: var(--paragraph-font-size-tablet);
+    }
+    /* Our Commitment Cards */
+    .our-commitment-container {
+        padding: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .our-commitment-container .our-commitment-container-cards {
+        padding: 20px 10px;
+    }
+    .our-commitment-container .our-commitment-container-cards img {
+        width: 90%;
+        height: 275px;
+    }
+}
+
+/* Bigger Tablets and Macbooks */
+
+@media screen and (min-width: 851px) and (max-width: 1000px) {
+    /* Main */
+    main {
+        padding: var(--tablet-padding);
+        gap: 30px;
+    }
+    /* About Us, Our History, Our Mission and Our Commitment Sections  */
+    .about-us,
+    .our-history,
+    .our-mission,
+    .our-commitment {
+        flex-direction: row;        
+    }
+    .about-us .about-us-content,
+    .our-history .our-history-content,
+    .our-mission .our-mission-content,
+    .our-commitment .our-commitment-content {
+        padding: var(--tablet-padding);
+        gap: 20px;
+    } 
+    .about-us .about-us-content h1,
+    .our-history .our-history-content h1,
+    .our-mission .our-mission-content h1,
+    .our-commitment .our-commitment-content h1 {
+        font-size: var(--header-font-size-tablet);
+    }
+    .about-us .about-us-content p,
+    .our-history .our-history-content p,
+    .our-mission .our-mission-content p,
+    .our-commitment .our-commitment-content p {
+        font-size: var(--paragraph-font-size-tablet);
+    }
+    .about-us .about-us-image,
+    .our-history .our-history-image,
+    .our-mission .our-mission-image,
+    .our-commitment .our-commitment-image {
+        padding: var(--tablet-padding);
+        display: flex;
+        justify-content: center;
+    }
+    .about-us .about-us-image img,
+    .our-history .our-history-image img,
+    .our-mission .our-mission-image img,
+    .our-commitment .our-commitment-image img {
+        width: 275px;
+        height: 275px;
+    }
+    /* Team Section */
+    .team {
+        padding: var(--tablet-padding);
+        gap: 20px;
+    }
+    .team > h1 {
+        font-size: var(--header-font-size-tablet);
+        align-self: flex-start;
+    }
+
+    .team > p {
+        font-size: var(--paragraph-font-size-tablet);
+        text-align: justify;
+    }
+    .team .team-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .team .team-container .team-container-cards {
+        gap: 20px;
+    }
+    .team .team-container .team-container-cards img {
+        width: 300px;
+        height: 300px;
+    }
+    .team .team-container .team-container-cards span {
+        font-size: var(--paragraph-font-size-tablet);
+    }
+    /* Our Commitment Cards */
+    .our-commitment-container {
+        padding: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .our-commitment-container .our-commitment-container-cards {
+        padding: 20px 10px;
     }
     .our-commitment-container .our-commitment-container-cards img {
         width: 90%;

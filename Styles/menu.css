@@ -27,7 +27,7 @@
 main {
     width: 100%;
     height: auto;
-    padding: 30px 45px;
+    padding: 60px;
     background-color: rgb(255, 255, 240);
 }
 
@@ -37,7 +37,7 @@ main {
 #tea,
 #snacks,
 #pastries {
-    padding-top: 30px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -69,7 +69,7 @@ main {
     background-color: rgb(65, 47, 47);
     display: flex;
     flex-direction: row;
-    gap: 100px;
+    gap: 50px;
 }
 
 #coffee .coffee-items .coffee-items-lists .coffee-items-lists-image img,
@@ -125,12 +125,13 @@ main {
 
 /* Responsiveness for Phones*/
 
-@media screen and (min-width: 360px) and (max-width: 576px) {
+/* Mobile */
+
+@media screen and (max-width: 550px) {
     /* Navigation Bar */
     .navbar-menu-categories {
         height: 40px;
         justify-content: center;
-        padding-inline-start: 0px;
     }
     .navbar-menu-categories a {
         font-size: 16px;
@@ -144,7 +145,6 @@ main {
     #tea,
     #snacks,
     #pastries {
-        padding-top: 10px;
         gap: 10px;
     }
     #coffee > h1,
@@ -172,7 +172,7 @@ main {
     #snacks .snacks-items .snacks-items-lists .snacks-items-lists-image img,
     #pastries .pastries-items .pastries-items-lists .pastries-items-lists-image img {
         width: 100%;
-        height: 430px;
+        height: 400px;
     }
     #coffee .coffee-items .coffee-items-lists .coffee-items-lists-description h1,
     #tea .tea-items .tea-items-lists .tea-items-lists-description h1,
@@ -187,6 +187,136 @@ main {
     #pastries .pastries-items .pastries-items-lists .pastries-items-lists-description p {
         font-size: 14px;
         margin-bottom: 5px;
+    }
 }
+
+/* Tablet */
+
+@media screen and (min-width: 551px) and (max-width: 850px) {
+    /* Navigation Bar */
+    .navbar-menu-categories {
+        height: 50px;
+        justify-content: flex-start;
+    }
+    .navbar-menu-categories a {
+        font-size: 20px;
+        padding: 8px 12px;
+    }
+    /* Main */
+    main {
+        padding: 40px;
+    }
+    #coffee,
+    #tea,
+    #snacks,
+    #pastries {
+        gap: 20px;
+    }
+    #coffee > h1,
+    #tea > h1,
+    #snacks > h1,
+    #pastries > h1 {
+        font-size: 36px;
+    }
+    #coffee .coffee-items,
+    #tea .tea-items,
+    #snacks .snacks-items,
+    #pastries .pastries-items {
+        gap: 20px;
+    }
+    #coffee .coffee-items .coffee-items-lists,
+    #tea .tea-items .tea-items-lists,
+    #snacks .snacks-items .snacks-items-lists,
+    #pastries .pastries-items .pastries-items-lists {
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    #coffee .coffee-items .coffee-items-lists .coffee-items-lists-image img,
+    #tea .tea-items .tea-items-lists .tea-items-lists-image img,
+    #snacks .snacks-items .snacks-items-lists .snacks-items-lists-image img,
+    #pastries .pastries-items .pastries-items-lists .pastries-items-lists-image img {
+        width: 100%;
+        height: 500px;
+    }
+    #coffee .coffee-items .coffee-items-lists .coffee-items-lists-description h1,
+    #tea .tea-items .tea-items-lists .tea-items-lists-description h1,
+    #snacks .snacks-items .snacks-items-lists .snacks-items-lists-description h1,
+    #pastries .pastries-items .pastries-items-lists .pastries-items-lists-description h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    #coffee .coffee-items .coffee-items-lists .coffee-items-lists-description p,
+    #tea .tea-items .tea-items-lists .tea-items-lists-description p,
+    #snacks .snacks-items .snacks-items-lists .snacks-items-lists-description p,
+    #pastries .pastries-items .pastries-items-lists .pastries-items-lists-description p {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Bigger Tablets and Macbooks */
+
+@media screen and (min-width: 851px) and (max-width: 1000px) {
+    /* Navigation Bar */
+    .navbar-menu-categories {
+        height: 50px;
+        justify-content: flex-start;
+    }
+    .navbar-menu-categories a {
+        font-size: 20px;
+        padding: 8px 12px;
+    }
+    /* Main */
+    main {
+        padding: 40px;
+    }
+    #coffee,
+    #tea,
+    #snacks,
+    #pastries {
+        gap: 20px;
+    }
+    #coffee > h1,
+    #tea > h1,
+    #snacks > h1,
+    #pastries > h1 {
+        font-size: 36px;
+    }
+    #coffee .coffee-items,
+    #tea .tea-items,
+    #snacks .snacks-items,
+    #pastries .pastries-items {
+        gap: 20px;
+    }
+    #coffee .coffee-items .coffee-items-lists,
+    #tea .tea-items .tea-items-lists,
+    #snacks .snacks-items .snacks-items-lists,
+    #pastries .pastries-items .pastries-items-lists {
+        padding: 20px;
+        flex-direction: row;
+        gap: 20px;
+    }
+    #coffee .coffee-items .coffee-items-lists .coffee-items-lists-image img,
+    #tea .tea-items .tea-items-lists .tea-items-lists-image img,
+    #snacks .snacks-items .snacks-items-lists .snacks-items-lists-image img,
+    #pastries .pastries-items .pastries-items-lists .pastries-items-lists-image img {
+        width: 400px;
+        height: 400px;
+    }
+    #coffee .coffee-items .coffee-items-lists .coffee-items-lists-description h1,
+    #tea .tea-items .tea-items-lists .tea-items-lists-description h1,
+    #snacks .snacks-items .snacks-items-lists .snacks-items-lists-description h1,
+    #pastries .pastries-items .pastries-items-lists .pastries-items-lists-description h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    #coffee .coffee-items .coffee-items-lists .coffee-items-lists-description p,
+    #tea .tea-items .tea-items-lists .tea-items-lists-description p,
+    #snacks .snacks-items .snacks-items-lists .snacks-items-lists-description p,
+    #pastries .pastries-items .pastries-items-lists .pastries-items-lists-description p {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
 }
 

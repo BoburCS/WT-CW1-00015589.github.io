@@ -3,6 +3,7 @@
 :root {
     --desktop-padding: 75px 50px;
     --mobile-padding: 20px 10px;
+    --tablet-padding: 30px 20px;
 
     --primary-color: rgb(65, 47, 47);
     --secondary-clr: rgb(255, 248, 220);
@@ -11,6 +12,8 @@
     --paragraph-font-size: 24px;
     --header-font-size-mobile: 28px;
     --paragraph-font-size-mobile: 16px;
+    --header-font-size-tablet: 36px;
+    --paragraph-font-size-tablet: 20px;
 }
 
 /* Main */
@@ -61,6 +64,7 @@ main {
 /* Special Events */
 
 .special-events {
+    padding: var(--desktop-padding);
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -161,11 +165,13 @@ main {
 
 /* Responsiveness */
 
-@media screen and (max-width: 576px) {
+/* Mobile */
+
+@media screen and (max-width: 550px) {
     /* Main */
     main {
         padding: var(--mobile-padding);
-        gap: 30px;  
+        gap: 40px;  
     }
     .events {
         flex-direction: column;
@@ -188,13 +194,14 @@ main {
     }
     /* Special Events */
     .special-events {
+        padding: var(--mobile-padding);
         gap: 10px;
     }
     .special-events h1 {
         font-size: var(--header-font-size-mobile);
     }
     .special-events .special-events-container {
-        padding-inline: 15px;
+        padding-inline: 0;
         flex-direction: column;
         gap: 10px;
     }
@@ -246,6 +253,186 @@ main {
     .promotions .promotions-container .loyalty-program-launch p,
     .community-spotlight .community-spotlight-container .community-spotlight-container-cards p {
         font-size: calc(var(--paragraph-font-size-mobile)/1.1);
+    }
+}
+
+/* Tablet */
+
+@media screen and (min-width: 551px) and (max-width: 850px) {
+    /* Main */
+    main {
+        padding: var(--tablet-padding);
+        gap: 30px;  
+    }
+    .events {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .events .events-content {
+        padding: var(--tablet-padding);
+        gap: 20px;
+    }
+    .events .events-content h1 {
+        font-size: var(--header-font-size-tablet);
+    }
+    .events .events-content p {
+        font-size: var(--paragraph-font-size-tablet);
+    }
+    .events .events-image img {
+        width: 400px;
+        height: 400px;
+    }
+    /* Special Events */
+    .special-events {
+        padding: var(--tablet-padding);
+        gap: 20px;
+    }
+    .special-events h1 {
+        font-size: var(--header-font-size-tablet);
+    }
+    .special-events .special-events-container {
+        padding-inline: 0;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .special-events .special-events-container .coffee-tasting-night,
+    .special-events .special-events-container .live-music-fridays {
+        padding: 15px;
+        gap: 10px;
+    }
+    .special-events .special-events-container .coffee-tasting-night h3,
+    .special-events .special-events-container .live-music-fridays h3 {
+        font-size: calc(var(--header-font-size-tablet)/1.5);
+        margin-bottom: 5px; 
+    }
+    .special-events .special-events-container .coffee-tasting-night p,
+    .special-events .special-events-container .live-music-fridays p {
+        font-size: calc(var(--paragraph-font-size-tablet)/1.1);
+        text-align: justify;
+    }
+    .special-events .special-events-container .coffee-tasting-night img,
+    .special-events .special-events-container .live-music-fridays img {
+        height: 330px;
+    }
+    /* Promotions */
+    .info-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .promotions,
+    .community-spotlight {
+        padding: 20px;
+        gap: 10px;
+    }
+    .promotions h1,
+    .community-spotlight h1 {
+        font-size: var(--header-font-size-tablet);
+    }
+    .promotions .promotions-container,
+    .community-spotlight .community-spotlight-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .promotions .promotions-container .seasonal-delights h3,
+    .promotions .promotions-container .loyalty-program-launch h3,
+    .community-spotlight .community-spotlight-container .community-spotlight-container-cards h3 {
+        font-size: calc(var(--header-font-size-tablet)/1.5);
+        margin-bottom: 10px;
+    }
+    .promotions .promotions-container .seasonal-delights p,
+    .promotions .promotions-container .loyalty-program-launch p,
+    .community-spotlight .community-spotlight-container .community-spotlight-container-cards p {
+        font-size: calc(var(--paragraph-font-size-tablet)/1.1);
+    }
+}
+
+/* Bigger Tablets and Macbooks */
+
+@media screen and (min-width: 851px) and (max-width: 1000px) {
+    /* Main */
+    main {
+        padding: var(--tablet-padding);
+        gap: 30px;  
+    }
+    .events {
+        flex-direction: row;
+        gap: 20px;
+    }
+    .events .events-content {
+        padding: var(--tablet-padding);
+        gap: 20px;
+    }
+    .events .events-content h1 {
+        font-size: var(--header-font-size-tablet);
+    }
+    .events .events-content p {
+        font-size: var(--paragraph-font-size-tablet);
+    }
+    .events .events-image img {
+        width: 450px;
+        height: 450px;
+    }
+    /* Special Events */
+    .special-events {
+        padding: var(--tablet-padding);
+        gap: 20px;
+    }
+    .special-events h1 {
+        font-size: var(--header-font-size-tablet);
+    }
+    .special-events .special-events-container {
+        padding-inline: 0;
+        flex-direction: row;
+        gap: 20px;
+    }
+    .special-events .special-events-container .coffee-tasting-night,
+    .special-events .special-events-container .live-music-fridays {
+        padding: 15px;
+        gap: 10px;
+    }
+    .special-events .special-events-container .coffee-tasting-night h3,
+    .special-events .special-events-container .live-music-fridays h3 {
+        font-size: calc(var(--header-font-size-tablet)/1.5);
+        margin-bottom: 5px; 
+    }
+    .special-events .special-events-container .coffee-tasting-night p,
+    .special-events .special-events-container .live-music-fridays p {
+        font-size: calc(var(--paragraph-font-size-tablet)/1.1);
+        text-align: justify;
+    }
+    .special-events .special-events-container .coffee-tasting-night img,
+    .special-events .special-events-container .live-music-fridays img {
+        height: 330px;
+    }
+    /* Promotions */
+    .info-container {
+        flex-direction: row;
+        gap: 20px;
+    }
+    .promotions,
+    .community-spotlight {
+        padding: 20px;
+        gap: 10px;
+    }
+    .promotions h1,
+    .community-spotlight h1 {
+        font-size: var(--header-font-size-tablet);
+    }
+    .promotions .promotions-container,
+    .community-spotlight .community-spotlight-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .promotions .promotions-container .seasonal-delights h3,
+    .promotions .promotions-container .loyalty-program-launch h3,
+    .community-spotlight .community-spotlight-container .community-spotlight-container-cards h3 {
+        font-size: calc(var(--header-font-size-tablet)/1.5);
+        margin-bottom: 10px;
+    }
+    .promotions .promotions-container .seasonal-delights p,
+    .promotions .promotions-container .loyalty-program-launch p,
+    .community-spotlight .community-spotlight-container .community-spotlight-container-cards p {
+        font-size: calc(var(--paragraph-font-size-tablet)/1.1);
     }
 }
 
