@@ -37,7 +37,7 @@ I used HTML for entering informations of web page and CSS for styling them. Howe
 ### HTML Structure
 
 Body {
-    Nav and Banner(using div)
+    Header {nav, banner using div}
 
     Main {sections, divs, aside, form}
 
